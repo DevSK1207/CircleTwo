@@ -212,7 +212,7 @@ public class RadioButtons extends View {
 
             //Stroke color work like margin of each slice
             mPaint.setStyle(Paint.Style.STROKE);
-            mPaint.setColor(Color.WHITE);
+            mPaint.setColor(Color.TRANSPARENT);
             canvas.drawArc(mSliceOval, startAngle, degreeStep, true, mPaint);
 
            startAngle += degreeStep;
@@ -230,7 +230,7 @@ public class RadioButtons extends View {
 
         //main big circle (around)
         mPaint.setStyle(Paint.Style.STROKE);
-        mPaint.setColor(Color.WHITE);
+        mPaint.setColor(Color.TRANSPARENT);
         canvas.drawCircle(mCenterX, mCenterY, mInnerRadius, mPaint);
         wheelWidth = getWidth();
         wheelHeight = getHeight();
@@ -259,6 +259,16 @@ public class RadioButtons extends View {
         rotate.setFillEnabled(true);
         rotate.setFillAfter(true);
         startAnimation(rotate);
+    }
+
+        /*
+        set color list
+     */
+
+
+    public void setColors(int color1, int color2, int color3, int color4, int color5, int color6, int color7, int color8){
+
+        this.colors = new int[]{color1, color2, color3, color4, color5, color6, color7, color8};
     }
 
     /**
